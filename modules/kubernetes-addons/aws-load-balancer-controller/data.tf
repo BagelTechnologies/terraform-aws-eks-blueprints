@@ -310,4 +310,14 @@ data "aws_iam_policy_document" "aws_lb" {
       "elasticloadbalancing:SetWebAcl",
     ]
   }
+
+  statement {
+    sid       = ""
+    effect    = "Allow"
+    resources = ["*"]
+
+    actions = [
+      "elasticloadbalancing:AddTags",
+    ]
+  }
 }
